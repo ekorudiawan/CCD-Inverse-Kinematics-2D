@@ -142,7 +142,7 @@ def onclick(event):
         print("Target :", target)
         print("End Effector :", P[-1][:3, 3])
         print("Error :", err)
-    plt.show()
+    fig.canvas.draw()
 
 def main():
     fig.canvas.mpl_connect('button_press_event', onclick)
