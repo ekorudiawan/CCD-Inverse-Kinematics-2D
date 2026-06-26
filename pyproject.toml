@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccd-ik"
+version = "2.0.0"
+description = "Cyclic Coordinate Descent — Inverse Kinematics for n-Link 2D Arm Robot"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.21",
+    "matplotlib>=3.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+gif = ["pillow>=9"]
+
+[project.scripts]
+ccd-ik = "ccd_ik.kinematics:demo"
+
+[tool.setuptools.packages.find]
+include = ["ccd_ik*"]
